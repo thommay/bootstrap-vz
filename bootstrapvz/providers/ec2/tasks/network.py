@@ -88,6 +88,7 @@ class InstallEnhancedNetworking(Task):
     @classmethod
     def run(cls, info):
         from bootstrapvz.common.releases import stretch
+        return # in-tree version is newer on 4.9 and 4.4
         if info.manifest.release >= stretch:
             version = '4.2.1'
             drivers_url = 'https://downloadmirror.intel.com/27160/eng/ixgbevf-4.2.1.tar.gz'
@@ -135,6 +136,7 @@ class InstallENANetworking(Task):
 
     @classmethod
     def run(cls, info):
+        return # use in-tree version
         version = '1.0.0'
         drivers_url = 'https://github.com/amzn/amzn-drivers'
         module_path = os.path.join(info.root, 'usr', 'src',
