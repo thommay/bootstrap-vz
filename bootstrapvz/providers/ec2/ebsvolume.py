@@ -30,7 +30,7 @@ class EBSVolume(Volume):
         count = 0
         for letter in string.ascii_lowercase[5:]:
             count += 1
-            dev_path = os.path.join('/dev', 'nvme' + count + 'n1')
+            dev_path = os.path.join('/dev', 'nvme' + str(count) + 'n1')
             if not os.path.exists(dev_path):
                 self.device_path = dev_path
                 self.ec2_device_path = os.path.join('/dev', 'sd' + letter)
