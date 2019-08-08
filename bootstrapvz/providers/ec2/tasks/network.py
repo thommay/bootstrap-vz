@@ -89,7 +89,7 @@ class InstallEnhancedNetworking(Task):
     def run(cls, info):
         from bootstrapvz.common.releases import stretch
         if info.manifest.release >= stretch:
-            version = '4.2.1'
+            version = '4.6.1'
             drivers_url = 'https://jaist.dl.sourceforge.net/project/e1000/ixgbevf%20stable/4.6.1/ixgbevf-4.6.1.tar.gz'
         else:
             version = '3.2.2'
